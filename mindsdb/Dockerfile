@@ -1,18 +1,14 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# Setup base
-RUN apk add --no-cache \
-    mariadb \
-    mariadb-client \
-    mariadb-server-utils \
-    pwgen
-
-ENV \
-    LD_PRELOAD="/usr/local/lib/libjemalloc.so.2" \
-    S6_SERVICES_GRACETIME=18000
-
+RUN     apk add --no-cache \
+        py3-pip \
+        python3 \
+        && pip install --no-cache-dir mindsdb
+WORKDIR /
+# Use cmd entry point to start the server
 # Copy data
 COPY rootfs /
+CMD ["python", "-m", "mindsdb", "--api=mysql", "--config=config.json"]
 
-WORKDIR /
+
