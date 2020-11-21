@@ -1,0 +1,9 @@
+{
+  "build_from": {
+    "aarch64": "mindsdb/mindsdb:latest",
+    "amd64": "mindsdb/mindsdb:latest",
+    "armhf": "mindsdb/mindsdb:latest",
+    "armv7": "mindsdb/mindsdb:latest",
+    "i386": "mindsdb/mindsdb:latest"
+  }
+}

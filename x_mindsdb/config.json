@@ -1,0 +1,32 @@
+{
+  "name": "mindsdb",
+  "version": "0.0.1",
+  "slug": "mindsdb",
+  "description": "mindsdb",
+  "url": "https://github.com/Laqoore/hassio-addons/mindsdb",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "system",
+  "boot": "auto",
+  "init": false,
+  "timeout": 20,
+  "services": ["mindsdb:provide"],
+  "ports": {
+    "47334/tcp": null
+  },
+  "options": {
+    "databases": ["homeassistant"],
+    "logins": [{ "username": "homeassistant", "password": null }],
+    "rights": [
+      {
+        "username": "homeassistant",
+        "database": "homeassistant"
+      }
+    ]
+  },
+  "schema": {
+    "databases": ["str"],
+    "logins": [{ "username": "str", "password": "str" }],
+    "rights": [{ "username": "str", "database": "str" }]
+  },
+  "image": "homeassistant/{arch}-addon-mindsdb"
+}
