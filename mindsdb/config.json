@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "slug": "mindsdb",
   "description": "mindsdb",
-  "url": "https://github.com/Laqoore/hassio-addons/tree/master/mindsdb",
+  "url": "https://github.com/Laqoore/hassio-addons/mindsdb",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "system",
   "boot": "auto",
